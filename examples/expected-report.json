@@ -1,0 +1,11 @@
+{
+  "assignmentId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-governance-sandbox/providers/Microsoft.Authorization/policyAssignments/azguarddev",
+  "evaluationRecords": 2,
+  "uniqueResources": 1,
+  "states": {
+    "Compliant": 1,
+    "NonCompliant": 1
+  },
+  "nonCompliantRecords": 1,
+  "unknownRecords": 0
+}

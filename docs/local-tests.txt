@@ -1,0 +1,28 @@
+test_assignment_has_no_identity (test_guardrails.CompileTests.test_assignment_has_no_identity) ... ok
+test_config_rejects_duplicates_and_unknown_keys (test_guardrails.CompileTests.test_config_rejects_duplicates_and_unknown_keys) ... ok
+test_default_audit (test_guardrails.CompileTests.test_default_audit) ... ok
+test_definition_dependencies_and_reference_ids (test_guardrails.CompileTests.test_definition_dependencies_and_reference_ids) ... ok
+test_deny_is_explicit (test_guardrails.CompileTests.test_deny_is_explicit) ... ok
+test_invalid_target (test_guardrails.CompileTests.test_invalid_target) ... ok
+test_policy_expressions_escaped_for_arm (test_guardrails.CompileTests.test_policy_expressions_escaped_for_arm) ... ok
+test_repeatable_build (test_guardrails.CompileTests.test_repeatable_build) ... ok
+test_expired_unbounded_or_timezone_free_rejected (test_guardrails.ExemptionTests.test_expired_unbounded_or_timezone_free_rejected) ... ok
+test_justification_required (test_guardrails.ExemptionTests.test_justification_required) ... ok
+test_scoped_expiring_exemption (test_guardrails.ExemptionTests.test_scoped_expiring_exemption) ... ok
+test_unknown_empty_or_duplicate_references_rejected (test_guardrails.ExemptionTests.test_unknown_empty_or_duplicate_references_rejected) ... ok
+test_cli_build_creates_all_artifacts (test_guardrails.ReportTests.test_cli_build_creates_all_artifacts) ... ok
+test_cli_noncompliance_exit_code (test_guardrails.ReportTests.test_cli_noncompliance_exit_code) ... ok
+test_counts_records_separately_from_resources (test_guardrails.ReportTests.test_counts_records_separately_from_resources) ... ok
+test_empty_export_is_not_success (test_guardrails.ReportTests.test_empty_export_is_not_success) ... ok
+test_compliant_storage_has_no_violations (test_guardrails.RuleTests.test_compliant_storage_has_no_violations) ... ok
+test_disallowed_location_is_detected (test_guardrails.RuleTests.test_disallowed_location_is_detected) ... ok
+test_global_location_is_excluded (test_guardrails.RuleTests.test_global_location_is_excluded) ... ok
+test_legacy_or_missing_tls (test_guardrails.RuleTests.test_legacy_or_missing_tls) ... ok
+test_missing_or_empty_tags (test_guardrails.RuleTests.test_missing_or_empty_tags) ... ok
+test_public_access_and_missing_property (test_guardrails.RuleTests.test_public_access_and_missing_property) ... ok
+test_storage_rules_ignore_other_types (test_guardrails.RuleTests.test_storage_rules_ignore_other_types) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.075s
+
+OK

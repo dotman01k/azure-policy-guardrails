@@ -1,0 +1,5 @@
+{
+  "prefix": "azguarddev",
+  "allowedLocations": ["eastus", "eastus2"],
+  "requiredTags": ["owner", "costCenter"]
+}

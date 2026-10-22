@@ -1,0 +1,22 @@
+name: Validate governance source
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - name: Validate shell syntax
+        run: for script in scripts/*.sh; do bash -n "$script"; done
+      - name: Compile deployment artifacts
+        run: python -m guardrails build --subscription 00000000-0000-0000-0000-000000000001 --resource-group rg-governance-sandbox
+      - uses: actions/upload-artifact@v4
+        with:
+          name: governance-audit-templates
+          path: build/
+          retention-days: 3

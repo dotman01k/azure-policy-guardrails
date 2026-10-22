@@ -1,0 +1,14 @@
+[
+  {
+    "policyAssignmentId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-governance-sandbox/providers/Microsoft.Authorization/policyAssignments/azguarddev",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-governance-sandbox/providers/Microsoft.Storage/storageAccounts/example",
+    "policyDefinitionReferenceId": "locations",
+    "complianceState": "Compliant"
+  },
+  {
+    "policyAssignmentId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-governance-sandbox/providers/Microsoft.Authorization/policyAssignments/azguarddev",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-governance-sandbox/providers/Microsoft.Storage/storageAccounts/example",
+    "policyDefinitionReferenceId": "storage-tls",
+    "complianceState": "NonCompliant"
+  }
+]
