@@ -42,7 +42,7 @@ jobs:
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       - name: Preview or deploy requested effect
         run: bash scripts/deploy.sh "$OPERATION" "$EFFECT"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: governance-deployment-templates

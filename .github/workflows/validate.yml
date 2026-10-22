@@ -15,7 +15,7 @@ jobs:
         run: for script in scripts/*.sh; do bash -n "$script"; done
       - name: Compile deployment artifacts
         run: python -m guardrails build --subscription 00000000-0000-0000-0000-000000000001 --resource-group rg-governance-sandbox
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: governance-audit-templates
           path: build/
