@@ -28,16 +28,16 @@ Indexed policies apply only to resource types supporting tags and location. They
 
 ## Repository
 
-To publish this prepared source archive yourself when GitHub repository creation is available, extract it into its own folder, sign in with GitHub CLI, initialize a new local git repository there, and run the commands below. Verify `gh api user --jq .login` returns `dotman01k` first. These commands create a new public repository; do not run them against an existing unrelated checkout.
+Clone the published project and run the local validation commands below:
 
 ```bash
-git init -b main
-git add README.md config.json guardrails tests scripts examples docs .github .gitignore
-git commit -m "Add Azure Policy governance release system"
-gh repo create dotman01k/azure-policy-guardrails --public --source . --remote origin --push
+git clone https://github.com/dotman01k/azure-policy-guardrails.git
+cd azure-policy-guardrails
 ```
 
-If that repository already exists, inspect its ownership and contents instead of using force push or overwriting it. After publication, review the validation workflow result. Authenticated deployment remains a separate, explicit action.
+The validation workflow tests each push and pull request. Azure deployment is a separate,
+manual workflow using environment-scoped OIDC. See [validation evidence](docs/validation.md)
+for independently executed checks and their limits.
 
 | Path | Responsibility |
 | --- | --- |
@@ -58,7 +58,7 @@ If that repository already exists, inspect its ownership and contents instead of
 1. Python 3.12, Bash and Azure CLI for deployment; the CLI itself has no third-party Python dependencies.
 2. Azure commercial subscription and an existing dedicated sandbox resource group. This project does not create workload resources or a resource group.
 3. Operator permission to assign the Resource Policy Contributor role if configuring OIDC. Resource Policy Contributor at subscription scope for definitions and initiative deployment; it is powerful governance access even though it grants no workload data-plane access. Prefer a dedicated sandbox subscription.
-4. GitHub repository administrator to configure environments, branch protections and OIDC trust. The intended repository is `dotman01k/azure-policy-guardrails`; publication status is recorded in validation evidence.
+4. GitHub repository administrator to configure environments, branch protections and OIDC trust. The repository is `dotman01k/azure-policy-guardrails`; CI evidence is recorded in the validation document.
 5. Confirm `Microsoft.Authorization` and `Microsoft.PolicyInsights` provider availability and that the target subscription supports the documented APIs.
 
 The compiler pins documented definition/initiative API `2023-04-01`, assignment API `2024-04-01`, and exemption API `2022-07-01-preview`. Exemptions use a preview ARM API and require an explicit operator deployment. Official references were checked on October 21, 2026; this is not a claim that the APIs are the newest available versions.

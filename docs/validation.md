@@ -17,6 +17,12 @@ Validation date: October 21, 2026.
 
 Authenticated ARM validation/what-if, Azure Policy alias acceptance, policy assignment creation, compliance scan, live Audit/Deny enforcement, and exemption propagation require an authorized Azure sandbox. The checked-in workflows provide a path to perform those operations. Offline rule evaluation supports only the small emitted operator subset; it is not an Azure Policy emulator.
 
-## Publication blocker
+## GitHub publication and CI
 
-The GitHub connection successfully listed dotman01k's repositories, including azure-aks-platform and azure-hub-spoke-platform. The available GitHub operations do not include repository creation, and no callable authorized browser session was available in this run. A separate repository could therefore not be created or populated. No GitHub CI run is claimed. The prepared project archive is preserved for publication as its own repository when that capability is available. Existing repositories were not repurposed.
+Published October 22, 2026, to https://github.com/dotman01k/azure-policy-guardrails.
+The **Validate governance source** push workflow completed successfully for implementation
+commit `6f7feb2e10d7d68e38dede54e5be0f68fc817ade`:
+https://github.com/dotman01k/azure-policy-guardrails/actions/runs/39732099639.
+It independently ran the 23 Python tests, shell syntax checks and ARM artifact compilation.
+Local tests were also rerun successfully on October 22 before upload. These are source/CI checks,
+not authenticated Azure enforcement evidence. The workflows remain manual for live deployment.
